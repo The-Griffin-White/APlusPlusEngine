@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Graphics|Win32">
+      <Configuration>Graphics</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Graphics|x64">
+      <Configuration>Graphics</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Win32">
+      <Configuration>Profile</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|x64">
+      <Configuration>Profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>DX Application</ProjectName>
+    <ProjectGuid>{06EDC280-1187-4614-A248-E640C095FA6B}</ProjectGuid>
+    <RootNamespace>Tutorial01</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|X64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|X64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Graphics|x64'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Graphics|Win32'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|X64'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Engine;$(SolutionDir)core;$(SolutionDir)dist\Math\include;$(SolutionDir)dist\DXTex\include;$(SolutionDir)dist\File\include;$(SolutionDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxguid.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+      <IgnoreSpecificDefaultLibraries>libcmtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Manifest>
+      <EnableDPIAwareness>PerMonitorHighDPIAware</EnableDPIAwareness>
+    </Manifest>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>$(SolutionDir)/dist/File/include;$(SolutionDir)/dist/DXTex/include;$(SolutionDir)/dist/Math/include;$(SolutionDir)/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxguid.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Manifest>
+      <EnableDPIAwareness>PerMonitorHighDPIAware</EnableDPIAwareness>
+    </Manifest>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;;dxguid.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <Manifest>
+      <EnableDPIAwareness>PerMonitorHighDPIAware</EnableDPIAwareness>
+    </Manifest>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxguid.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <Manifest>
+      <EnableDPIAwareness>PerMonitorHighDPIAware</EnableDPIAwareness>
+    </Manifest>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;PROFILE;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxguid.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <Manifest>
+      <EnableDPIAwareness>PerMonitorHighDPIAware</EnableDPIAwareness>
+    </Manifest>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|X64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;PROFILE;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxguid.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <Manifest>
+      <EnableDPIAwareness>PerMonitorHighDPIAware</EnableDPIAwareness>
+    </Manifest>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\core\Camera.cpp" />
+    <ClCompile Include="..\core\CameraOrthoCmd.cpp" />
+    <ClCompile Include="..\core\CameraPerspCmd.cpp" />
+    <ClCompile Include="..\core\d3dUtil.cpp" />
+    <ClCompile Include="..\core\DebugOut.cpp" />
+    <ClCompile Include="..\core\DXApp.cpp" />
+    <ClCompile Include="..\core\Engine.cpp" />
+    <ClCompile Include="..\core\FlatPlane.cpp" />
+    <ClCompile Include="..\core\FlatPlane_Object.cpp" />
+    <ClCompile Include="..\core\FlatPlane_Object_NoLight.cpp" />
+    <ClCompile Include="..\core\GameTimer.cpp" />
+    <ClCompile Include="..\core\GraphicObject_Base.cpp" />
+    <ClCompile Include="..\core\GraphicsObject_ColorNoTexture.cpp" />
+    <ClCompile Include="..\core\GraphicsObject_ColorNoTextureLight.cpp" />
+    <ClCompile Include="..\core\GraphicsObject_Sprite.cpp" />
+    <ClCompile Include="..\core\GraphicsObject_TextureFlat.cpp" />
+    <ClCompile Include="..\core\GraphicsObject_TextureLight.cpp" />
+    <ClCompile Include="..\core\GraphicsObject_WireframeConstantColor.cpp" />
+    <ClCompile Include="..\core\Keyboard.cpp" />
+    <ClCompile Include="..\core\MathTools.cpp" />
+    <ClCompile Include="..\core\MeshSeparator.cpp" />
+    <ClCompile Include="..\core\Mirror.cpp" />
+    <ClCompile Include="..\core\Model.cpp" />
+    <ClCompile Include="..\core\ModelTools.cpp" />
+    <ClCompile Include="..\core\SFXManager.cpp" />
+    <ClCompile Include="..\core\ShaderBase.cpp" />
+    <ClCompile Include="..\core\ShaderColor.cpp" />
+    <ClCompile Include="..\core\ShaderColorLight.cpp" />
+    <ClCompile Include="..\core\ShaderTexLight.cpp" />
+    <ClCompile Include="..\core\ShaderTexture.cpp" />
+    <ClCompile Include="..\core\SkyBox.cpp" />
+    <ClCompile Include="..\core\SkyBoxManager.cpp" />
+    <ClCompile Include="..\core\SkyBox_Object.cpp" />
+    <ClCompile Include="..\core\TerrainObject.cpp" />
+    <ClCompile Include="..\core\TerrainModel.cpp" />
+    <ClCompile Include="..\core\Texture.cpp" />
+    <ClCompile Include="..\src\Engine\Alarmable.cpp" />
+    <ClCompile Include="..\src\Engine\AlarmableManager.cpp" />
+    <ClCompile Include="..\src\Engine\AlarmDeregistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\AlarmRegistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\APlusPlusEngine.cpp" />
+    <ClCompile Include="..\src\Engine\CameraManager.cpp" />
+    <ClCompile Include="..\src\Engine\Collidable.cpp" />
+    <ClCompile Include="..\src\Engine\CollisionManager.cpp" />
+    <ClCompile Include="..\src\Engine\CollisionVolumeAABB.cpp" />
+    <ClCompile Include="..\src\Engine\CollisionVolumeBoundingBoxBase.cpp" />
+    <ClCompile Include="..\src\Engine\CollisionVolumeBSphere.cpp" />
+    <ClCompile Include="..\src\Engine\CollisionVolumeOBB.cpp" />
+    <ClCompile Include="..\src\Engine\Drawable.cpp" />
+    <ClCompile Include="..\src\Engine\DrawableManager.cpp" />
+    <ClCompile Include="..\src\Engine\DrawDeregistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\DrawRegistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\FreezeTime.cpp" />
+    <ClCompile Include="..\src\Engine\GameObject.cpp" />
+    <ClCompile Include="..\src\Engine\GameObjectEntryCommand.cpp" />
+    <ClCompile Include="..\src\Engine\GameObjectExitCommand.cpp" />
+    <ClCompile Include="..\src\Engine\Inputable.cpp" />
+    <ClCompile Include="..\src\Engine\InputDeregistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\InputRegistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\KeyboardEventManager.cpp" />
+    <ClCompile Include="..\src\Engine\ModelManager.cpp" />
+    <ClCompile Include="..\src\Engine\PWMathTools.cpp" />
+    <ClCompile Include="..\src\Engine\Scene.cpp" />
+    <ClCompile Include="..\src\Engine\SceneAttorneyToInputable.cpp" />
+    <ClCompile Include="..\src\Engine\SceneChangeNextCommand.cpp" />
+    <ClCompile Include="..\src\Engine\SceneManager.cpp" />
+    <ClCompile Include="..\src\Engine\SceneRegistrationBroker.cpp" />
+    <ClCompile Include="..\src\Engine\ShaderManager.cpp" />
+    <ClCompile Include="..\src\Engine\SingleKeyEventManager.cpp" />
+    <ClCompile Include="..\src\Engine\Sprite.cpp" />
+    <ClCompile Include="..\src\Engine\SpriteDeregistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\SpriteFactory.cpp" />
+    <ClCompile Include="..\src\Engine\SpriteManager.cpp" />
+    <ClCompile Include="..\src\Engine\SpriteRegistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\Terrain.cpp" />
+    <ClCompile Include="..\src\Engine\TerrainManager.cpp" />
+    <ClCompile Include="..\src\Engine\TextureManager.cpp" />
+    <ClCompile Include="..\src\Engine\TimeManager.cpp" />
+    <ClCompile Include="..\src\Engine\Updateable.cpp" />
+    <ClCompile Include="..\src\Engine\UpdateableManager.cpp" />
+    <ClCompile Include="..\src\Engine\UpdateDeregistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\UpdateRegistrationCommand.cpp" />
+    <ClCompile Include="..\src\Engine\Visualizer.cpp" />
+    <ClCompile Include="..\src\Engine\VisualizerCommand.cpp" />
+    <ClCompile Include="..\src\Engine\VisualizerCommandAABB.cpp" />
+    <ClCompile Include="..\src\Engine\VisualizerCommandBroker.cpp" />
+    <ClCompile Include="..\src\Engine\VisualizerCommandBSphere.cpp" />
+    <ClCompile Include="..\src\Engine\VisualizerCommandOBB.cpp" />
+    <ClCompile Include="..\src\Resources\LoadAllResources.cpp" />
+    <ClCompile Include="..\src\User\Axis.cpp" />
+    <ClCompile Include="..\src\User\Bomb.cpp" />
+    <ClCompile Include="..\src\User\BombFactory.cpp" />
+    <ClCompile Include="..\src\User\DemoScene.cpp" />
+    <ClCompile Include="..\src\User\EnemyBomb.cpp" />
+    <ClCompile Include="..\src\User\EnemyBombFactory.cpp" />
+    <ClCompile Include="..\src\User\EnemyShip.cpp" />
+    <ClCompile Include="..\src\User\EnemyShipFactory.cpp" />
+    <ClCompile Include="..\src\User\EnemySpawner.cpp" />
+    <ClCompile Include="..\src\User\EnemyTank.cpp" />
+    <ClCompile Include="..\src\User\EnemyTankFactory.cpp" />
+    <ClCompile Include="..\src\User\Explosion.cpp" />
+    <ClCompile Include="..\src\User\ExplosionFactory.cpp" />
+    <ClCompile Include="..\src\User\GameInitialize.cpp" />
+    <ClCompile Include="..\src\User\GodCam.cpp" />
+    <ClCompile Include="..\src\User\Level1.cpp" />
+    <ClCompile Include="..\src\User\Level2.cpp" />
+    <ClCompile Include="..\src\User\Level3.cpp" />
+    <ClCompile Include="..\src\User\MovementDemoScene.cpp" />
+    <ClCompile Include="..\src\User\Plane.cpp" />
+    <ClCompile Include="..\src\User\Plane2.cpp" />
+    <ClCompile Include="..\src\User\Plane3.cpp" />
+    <ClCompile Include="..\src\User\PlaneBase.cpp" />
+    <ClCompile Include="..\src\User\Player.cpp" />
+    <ClCompile Include="..\src\User\PlayerManager.cpp" />
+    <ClCompile Include="..\src\User\SecondDemoScene.cpp" />
+    <ClCompile Include="..\src\User\ShipSpawner.cpp" />
+    <ClCompile Include="..\src\User\SpaceFrigate.cpp" />
+    <ClCompile Include="..\src\User\Tank.cpp" />
+    <ClCompile Include="..\src\User\TankSpawner.cpp" />
+    <ClCompile Include="..\src\User\TestLevel.cpp" />
+    <ClCompile Include="..\src\User\TestShip.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\core\APPEcore.h" />
+    <ClInclude Include="..\core\AzulFileHdr.h" />
+    <ClInclude Include="..\core\Camera.h" />
+    <ClInclude Include="..\core\CameraAttorneyToCommands.h" />
+    <ClInclude Include="..\core\CameraOrthoCmd.h" />
+    <ClInclude Include="..\core\CameraPerspCmd.h" />
+    <ClInclude Include="..\core\CameraProjCmd.h" />
+    <ClInclude Include="..\core\d3dUtil.h" />
+    <ClInclude Include="..\core\DebugOut.h" />
+    <ClInclude Include="..\core\DXApp.h" />
+    <ClInclude Include="..\core\Engine.h" />
+    <ClInclude Include="..\core\EngineAttorneyToGraphics.h" />
+    <ClInclude Include="..\core\FlatPlane.h" />
+    <ClInclude Include="..\core\FlatPlane_Object.h" />
+    <ClInclude Include="..\core\FlatPlane_Object_NoLight.h" />
+    <ClInclude Include="..\core\GameTimer.h" />
+    <ClInclude Include="..\core\GraphicObject_Base.h" />
+    <ClInclude Include="..\core\GraphicsObject_ColorNoTexture.h" />
+    <ClInclude Include="..\core\GraphicsObject_ColorNoTextureLight.h" />
+    <ClInclude Include="..\core\GraphicsObject_Sprite.h" />
+    <ClInclude Include="..\core\GraphicsObject_TextureFlat.h" />
+    <ClInclude Include="..\core\GraphicsObject_TextureLight.h" />
+    <ClInclude Include="..\core\GraphicsObject_WireframeConstantColor.h" />
+    <ClInclude Include="..\core\Keyboard.h" />
+    <ClInclude Include="..\core\LightStructs.h" />
+    <ClInclude Include="..\core\MathTools.h" />
+    <ClInclude Include="..\core\MeshSeparator.h" />
+    <ClInclude Include="..\core\Mirror.h" />
+    <ClInclude Include="..\core\Model.h" />
+    <ClInclude Include="..\core\ModelTools.h" />
+    <ClInclude Include="..\core\SFXManager.h" />
+    <ClInclude Include="..\core\ShaderBase.h" />
+    <ClInclude Include="..\core\ShaderColor.h" />
+    <ClInclude Include="..\core\ShaderColorLight.h" />
+    <ClInclude Include="..\core\ShaderTexLight.h" />
+    <ClInclude Include="..\core\ShaderTexture.h" />
+    <ClInclude Include="..\core\SkyBox.h" />
+    <ClInclude Include="..\core\SkyBoxManager.h" />
+    <ClInclude Include="..\core\SkyBox_Object.h" />
+    <ClInclude Include="..\core\TerrainObject.h" />
+    <ClInclude Include="..\core\TerrainModel.h" />
+    <ClInclude Include="..\core\Texture.h" />
+    <ClInclude Include="..\dist\DXTex\include\DirectXTex.h" />
+    <ClInclude Include="..\dist\File\include\File.h" />
+    <ClInclude Include="..\dist\Math\include\Align16.h" />
+    <ClInclude Include="..\dist\Math\include\Constants.h" />
+    <ClInclude Include="..\dist\Math\include\Enum.h" />
+    <ClInclude Include="..\dist\Math\include\MathApp.h" />
+    <ClInclude Include="..\dist\Math\include\MathEngine.h" />
+    <ClInclude Include="..\dist\Math\include\Matrix.h" />
+    <ClInclude Include="..\dist\Math\include\Quat.h" />
+    <ClInclude Include="..\dist\Math\include\QuatApp.h" />
+    <ClInclude Include="..\dist\Math\include\Util.h" />
+    <ClInclude Include="..\dist\Math\include\Vect.h" />
+    <ClInclude Include="..\dist\Math\include\VectApp.h" />
+    <ClInclude Include="..\src\Engine\Alarmable.h" />
+    <ClInclude Include="..\src\Engine\AlarmableAttorneyToAlarmableManager.h" />
+    <ClInclude Include="..\src\Engine\AlarmableAttorneyToAlarmDeregCmd.h" />
+    <ClInclude Include="..\src\Engine\AlarmableAttorneyToAlarmRegCmd.h" />
+    <ClInclude Include="..\src\Engine\AlarmableManager.h" />
+    <ClInclude Include="..\src\Engine\AlarmDeregistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\AlarmRegistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\APlusPlusEngine.h" />
+    <ClInclude Include="..\src\Engine\APlusPlusEngineAttorneyToTimeManager.h" />
+    <ClInclude Include="..\src\Engine\CameraManager.h" />
+    <ClInclude Include="..\src\Engine\Collidable.h" />
+    <ClInclude Include="..\src\Engine\CollidableGroup.h" />
+    <ClInclude Include="..\src\Engine\CollidableGroupDeleteCommand.h" />
+    <ClInclude Include="..\src\Engine\CollidableGroupUpdateCommand.h" />
+    <ClInclude Include="..\src\Engine\CollisionDeregistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\CollisionManager.h" />
+    <ClInclude Include="..\src\Engine\CollisionRegistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\CollisionTestCommandBase.h" />
+    <ClInclude Include="..\src\Engine\CollisionTestPairCommand.h" />
+    <ClInclude Include="..\src\Engine\CollisionTestSelfCommand.h" />
+    <ClInclude Include="..\src\Engine\CollisionTestTerrainCommand.h" />
+    <ClInclude Include="..\src\Engine\CollisionVolume.h" />
+    <ClInclude Include="..\src\Engine\CollisionVolumeAABB.h" />
+    <ClInclude Include="..\src\Engine\CollisionVolumeBoundingBoxBase.h" />
+    <ClInclude Include="..\src\Engine\CollisionVolumeBSphere.h" />
+    <ClInclude Include="..\src\Engine\CollisionVolumeOBB.h" />
+    <ClInclude Include="..\src\Engine\CommandBase.h" />
+    <ClInclude Include="..\src\Engine\DeleteBaseCommand.h" />
+    <ClInclude Include="..\src\Engine\Drawable.h" />
+    <ClInclude Include="..\src\Engine\DrawableAttorneyToDrawableManager.h" />
+    <ClInclude Include="..\src\Engine\DrawableAttorneyToDrawDeregCmd.h" />
+    <ClInclude Include="..\src\Engine\DrawableAttorneyToDrawRegCmd.h" />
+    <ClInclude Include="..\src\Engine\DrawableManager.h" />
+    <ClInclude Include="..\src\Engine\DrawDeregistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\DrawRegistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\FreezeTime.h" />
+    <ClInclude Include="..\src\Engine\GameObjAttorneyToEntryCommand.h" />
+    <ClInclude Include="..\src\Engine\GameObjAttorneyToExitCommand.h" />
+    <ClInclude Include="..\src\Engine\GameObject.h" />
+    <ClInclude Include="..\src\Engine\GameObjectEntryCommand.h" />
+    <ClInclude Include="..\src\Engine\GameObjectExitCommand.h" />
+    <ClInclude Include="..\src\Engine\Inputable.h" />
+    <ClInclude Include="..\src\Engine\InputableAttorneyToCommand.h" />
+    <ClInclude Include="..\src\Engine\InputableAttorneyToSKManager.h" />
+    <ClInclude Include="..\src\Engine\InputDeregistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\InputRegistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\KeyboardEventManager.h" />
+    <ClInclude Include="..\src\Engine\ModelManager.h" />
+    <ClInclude Include="..\src\Engine\ModelManagerAttorneyToEngine.h" />
+    <ClInclude Include="..\src\Engine\PWMathTools.h" />
+    <ClInclude Include="..\src\Engine\RegistrationState.h" />
+    <ClInclude Include="..\src\Engine\Scene.h" />
+    <ClInclude Include="..\src\Engine\SceneAttorneyToAlarmable.h" />
+    <ClInclude Include="..\src\Engine\SceneAttorneyToCollidable.h" />
+    <ClInclude Include="..\src\Engine\SceneAttorneyToCollidableGroup.h" />
+    <ClInclude Include="..\src\Engine\SceneAttorneyToDrawable.h" />
+    <ClInclude Include="..\src\Engine\SceneAttorneyToGameObject.h" />
+    <ClInclude Include="..\src\Engine\SceneAttorneyToInputable.h" />
+    <ClInclude Include="..\src\Engine\SceneAttorneyToSceneManager.h" />
+    <ClInclude Include="..\src\Engine\SceneAttorneyToUpdateable.h" />
+    <ClInclude Include="..\src\Engine\SceneChangeCommandBase.h" />
+    <ClInclude Include="..\src\Engine\SceneChangeNextCommand.h" />
+    <ClInclude Include="..\src\Engine\SceneChangeNullCommand.h" />
+    <ClInclude Include="..\src\Engine\SceneManager.h" />
+    <ClInclude Include="..\src\Engine\SceneManagerAttorneyToEngine.h" />
+    <ClInclude Include="..\src\Engine\SceneManagerAttorneyToSceneChange.h" />
+    <ClInclude Include="..\src\Engine\SceneNull.h" />
+    <ClInclude Include="..\src\Engine\SceneRegistrationAttorneyToScene.h" />
+    <ClInclude Include="..\src\Engine\SceneRegistrationBroker.h" />
+    <ClInclude Include="..\src\Engine\SceneRegistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\ShaderManager.h" />
+    <ClInclude Include="..\src\Engine\ShaderManagerAttorneyToEngine.h" />
+    <ClInclude Include="..\src\Engine\SingleKeyEventManager.h" />
+    <ClInclude Include="..\src\Engine\Sprite.h" />
+    <ClInclude Include="..\src\Engine\SpriteAttorneyToCommands.h" />
+    <ClInclude Include="..\src\Engine\SpriteAttorneyToManager.h" />
+    <ClInclude Include="..\src\Engine\SpriteDeregistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\SpriteFactory.h" />
+    <ClInclude Include="..\src\Engine\SpriteFactoryAttorneyToEngine.h" />
+    <ClInclude Include="..\src\Engine\SpriteManager.h" />
+    <ClInclude Include="..\src\Engine\SpriteManagerAttorneyToScene.h" />
+    <ClInclude Include="..\src\Engine\SpriteRegistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\Terrain.h" />
+    <ClInclude Include="..\src\Engine\TerrainManager.h" />
+    <ClInclude Include="..\src\Engine\TerrainManagerAttorneyToEngine.h" />
+    <ClInclude Include="..\src\Engine\TextureManager.h" />
+    <ClInclude Include="..\src\Engine\TextureManagerAttorneyToEngine.h" />
+    <ClInclude Include="..\src\Engine\TimeManager.h" />
+    <ClInclude Include="..\src\Engine\TimeManagerAttorneyToAPlusPlusEngine.h" />
+    <ClInclude Include="..\src\Engine\Updateable.h" />
+    <ClInclude Include="..\src\Engine\UpdateableAttorneyToUpdateableManager.h" />
+    <ClInclude Include="..\src\Engine\UpdateableAttorneyToUpdateDeregCmd.h" />
+    <ClInclude Include="..\src\Engine\UpdateableAttorneyToUpdateRegCmd.h" />
+    <ClInclude Include="..\src\Engine\UpdateableManager.h" />
+    <ClInclude Include="..\src\Engine\UpdateDeregistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\UpdateRegistrationCommand.h" />
+    <ClInclude Include="..\src\Engine\Visualizer.h" />
+    <ClInclude Include="..\src\Engine\VisualizerAttorneyToCollisionVolume.h" />
+    <ClInclude Include="..\src\Engine\VisualizerAttorneyToCommand.h" />
+    <ClInclude Include="..\src\Engine\VisualizerAttorneyToEngine.h" />
+    <ClInclude Include="..\src\Engine\VisualizerCommand.h" />
+    <ClInclude Include="..\src\Engine\VisualizerCommandAABB.h" />
+    <ClInclude Include="..\src\Engine\VisualizerCommandBroker.h" />
+    <ClInclude Include="..\src\Engine\VisualizerCommandBSphere.h" />
+    <ClInclude Include="..\src\Engine\VisualizerCommandOBB.h" />
+    <ClInclude Include="..\src\User\Axis.h" />
+    <ClInclude Include="..\src\User\Bomb.h" />
+    <ClInclude Include="..\src\User\BombFactory.h" />
+    <ClInclude Include="..\src\User\DemoScene.h" />
+    <ClInclude Include="..\src\User\EnemyBomb.h" />
+    <ClInclude Include="..\src\User\EnemyBombFactory.h" />
+    <ClInclude Include="..\src\User\EnemyShip.h" />
+    <ClInclude Include="..\src\User\EnemyShipFactory.h" />
+    <ClInclude Include="..\src\User\EnemySpawner.h" />
+    <ClInclude Include="..\src\User\EnemyTank.h" />
+    <ClInclude Include="..\src\User\EnemyTankFactory.h" />
+    <ClInclude Include="..\src\User\Explosion.h" />
+    <ClInclude Include="..\src\User\ExplosionFactory.h" />
+    <ClInclude Include="..\src\User\GodCam.h" />
+    <ClInclude Include="..\src\User\Level1.h" />
+    <ClInclude Include="..\src\User\Level2.h" />
+    <ClInclude Include="..\src\User\Level3.h" />
+    <ClInclude Include="..\src\User\MovementDemoScene.h" />
+    <ClInclude Include="..\src\User\Plane.h" />
+    <ClInclude Include="..\src\User\Plane2.h" />
+    <ClInclude Include="..\src\User\Plane3.h" />
+    <ClInclude Include="..\src\User\PlaneBase.h" />
+    <ClInclude Include="..\src\User\Player.h" />
+    <ClInclude Include="..\src\User\PlayerManager.h" />
+    <ClInclude Include="..\src\User\SecondDemoScene.h" />
+    <ClInclude Include="..\src\User\ShipSpawner.h" />
+    <ClInclude Include="..\src\User\SpaceFrigate.h" />
+    <ClInclude Include="..\src\User\Tank.h" />
+    <ClInclude Include="..\src\User\TankSpawner.h" />
+    <ClInclude Include="..\src\User\TestLevel.h" />
+    <ClInclude Include="..\src\User\TestShip.h" />
+    <CLInclude Include="resource.h" />
+    <ResourceCompile Include="DXApplication.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\dist\DXTex\lib\DirectXTex.lib" />
+    <Library Include="..\dist\File\lib\File_Debug.lib" />
+    <Library Include="..\dist\Math\lib\MathEngine_Debug.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Assets\Shaders\ColorLight.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Assets\Shaders\ColorSelected.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Assets\Shaders\ColorSelected3D.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Assets\Shaders\SimpleColor.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Assets\Shaders\SimpleColor3D.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Assets\Shaders\SimpleColorPlus.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Assets\Shaders\Texture.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Assets\Shaders\TextureLight.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
